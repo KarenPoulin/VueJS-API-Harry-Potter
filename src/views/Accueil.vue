@@ -1,0 +1,15 @@
+<template>
+    <h1>Accueil</h1>
+
+    <main>
+        <formNewsletter />
+    </main>
+</template>
+
+<script setup>
+import formNewsletter from '@/components/formNewsletter.vue';
+</script>
+
+<style>
+
+</style>
