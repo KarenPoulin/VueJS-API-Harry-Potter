@@ -1,6 +1,4 @@
 <template>
-    <h1>Accueil</h1>
-
     <main>
         <formNewsletter />
     </main>
