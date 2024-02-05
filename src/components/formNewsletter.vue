@@ -4,7 +4,7 @@
             <img :src="NewlettersImage" alt="Daily Prophet newsletter" class="rounded-lg">
         </div>
 
-        <div class="col-start-6 col-end-12 bg-slate-800 m-3 p-8 rounded-lg flex flex-col justify-center">
+        <div class="col-start-6 col-end-12 bg-slate-800 m-3 py-8 px-16 rounded-lg flex flex-col justify-center">
             <h2 class="text-white mb-2 pb-1 uppercase text-3xl font-bold tracking-wider border-b-2">Plongez dans la Magie!</h2>
             <p class="text-white mb-10 leading-8">Inscrivez-vous à notre infolettre sur Harry Potter pour un accès exclusif à des annonces, des événements 
                 et des révélations sur l'univers magique de J.K. Rowling. Recevez régulièrement des actualités dans votre boîte de réception 
@@ -14,7 +14,7 @@
                     <div class="flex flex-col mb-4">
                         <div class="flex flex-row w-full items-baseline">
                             <label for="name" class="text-white mr-4">Nom</label>
-                            <input type="text" id="name" name="name" @change="validateString(infos.name, 'name')" v-model="infos.name" placeholder="John Doe"
+                            <input type="text" id="name" name="name" @change="validateString(infos.name, 'name')" v-model="infos.name" autocomplete="name" placeholder="John Doe"
                                 class="py-2 px-3 w-full rounded-md">
                         </div>
                         <p v-if="validationChamps.name !== ''" class="pt-2 text-xs text-red-500">{{ validationChamps.name }}</p>
@@ -22,7 +22,7 @@
                     <div class="flex flex-col mb-4">
                         <div class="flex flex-row w-full items-baseline">
                             <label for="email" class="text-white mr-4">Courriel</label>
-                            <input type="email" id="email" name="email" @change="validateEmail(infos.email, 'email')" v-model="infos.email" placeholder="courriel@courriel.com"
+                            <input type="email" id="email" name="email" @change="validateEmail(infos.email, 'email')" v-model="infos.email" autocomplete="email" placeholder="courriel@courriel.com"
                             class="py-2 px-3 w-full rounded-md">
                         </div>
                         <p v-if="validationChamps.email !== ''" class="pt-2 text-xs text-red-500">{{ validationChamps.email }}</p>

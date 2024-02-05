@@ -1,8 +1,14 @@
 <template>
-    <h1>Favoris</h1>
+    <div class="mb-10 bg-center bg-[url('https://media.gqmagazine.fr/photos/5ea817a8cab184000870fc22/16:9/w_1280,c_limit/harry-potter.png')] 
+            bg-neutral-600 bg-blend-multiply bg-cover w-full">
+        <div class="py-48 mx-auto max-w-screen-xl text-center">
+            <h1 class="font-serif text-4xl font-extrabold tracking-widest text-white uppercase">Liste de favoris</h1>
+        </div>
+    </div>
+    <charactersTable />
 </template>
-
 <script setup>
+import charactersTable from '@/components/charactersTable.vue';
 
 </script>
 

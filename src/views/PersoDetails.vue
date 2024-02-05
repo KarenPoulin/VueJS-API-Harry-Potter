@@ -1,20 +1,13 @@
 <template>
-    <h1>Perso Détails</h1>
-    <div v-if="characterResult !== null">
-        <p>{{ characterResult.fullName }}</p>
-        <img :src="characterResult.image" :alt="`Photo de ${characterResult.fullName}`">
-        <p>Surnom: {{ characterResult.nickname }}</p>
-        <p>Date de naissance: {{ characterResult.birthdate }}</p>
-        <div v-if="characterResult.children.length !== 0">
-            <p>Ses enfants:</p>
-            <template v-for="child in characterResult.children" :key="child">
-                <p>{{ child }}</p>
-            </template>
+    <div class="bg-center bg-[url('https://media.gqmagazine.fr/photos/5ea817a8cab184000870fc22/16:9/w_1280,c_limit/harry-potter.png')] 
+                bg-neutral-600 bg-blend-multiply bg-cover w-full">
+        <div class="py-48 mx-auto max-w-screen-xl text-center">
+            <h1 class="font-serif text-4xl font-extrabold tracking-widest text-white uppercase">Fiche détaillée</h1>
         </div>
-        <p>Maison: {{ characterResult.hogwartsHouse }}</p>
-        <p>Interprété par: {{ characterResult.interpretedBy }}</p>
     </div>
-    
+    <div v-if="characterResult !== null" class="grid grid-cols-12">
+        <fichePersos :characterResult="characterResult" />
+    </div>
 </template>
 
 <script setup>
@@ -22,6 +15,7 @@
     import { useRoute } from 'vue-router';
     import { ref } from "vue";
     import {useCharacter} from '../composables/callsToAPI';
+    import fichePersos from '@/components/fichePersos.vue';
 
     const {characterResult, getCharacter} = useCharacter();
     const route = useRoute();
