@@ -13,7 +13,3 @@ import formNewsletter from '@/components/formNewsletter.vue';
 import heroCarousel from '@/components/heroCarousel.vue';
 import Image from '../assets/slider-1.jpg'
 </script>
-
-<style>
-
-</style>

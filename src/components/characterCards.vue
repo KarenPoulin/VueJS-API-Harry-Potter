@@ -48,7 +48,3 @@ import { useFavorisStore } from '@/stores/favoris';
     const favoris = useFavorisStore();
 
 </script>
-
-<style>
-
-</style>
