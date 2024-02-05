@@ -7,10 +7,13 @@
         <div class="bg-slate-800 py-10">
             <div class="grid grid-cols-12">
                 <div class="col-start-5 col-end-9">
+                    <p class="mb-8 text-white text-center font-light">Découvrez le monde magique à travers notre outil de recherche de personnages. Explorez des héros, des méchants, des professeurs et des élèves. 
+                        Que vous recherchiez vos favoris ou découvriez de nouveaux visages, notre base de données complète vous fournit toutes les informations nécessaires. 
+                        Plongez dans l'aventure et explorez les mystères de chaque personnage de cet univers enchanteur.</p>
                     <form action="" class="flex flex-col justify-center">
                         <div class="flex flex-row mb-4 w-full justify-between items-center">
                             <label for="personnage" class="text-white mr-4 w-96">Rechercher un personnage:</label>
-                            <input type="text" id="personnage" name="personnage" minlength="1" maxlength="100" v-model="inputCharacter"
+                            <input type="text" id="personnage" name="personnage" minlength="1" maxlength="100" placeholder="Harry" v-model="inputCharacter"
                                 class="py-2 px-3 rounded-md w-full">
                         </div>
                         <button @click="research" class="py-2 px-4 font-medium bg-white text-black rounded-lg">Rechercher</button>
