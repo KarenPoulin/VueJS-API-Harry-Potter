@@ -32,18 +32,9 @@
                         <characterCards :character="character"/>
                     </template>
                 </div>
-
             </div>
         </div>
 
-
-
-<!--     <div v-if="charactersSearchResults.length !== 0">
-        <template v-for="character in charactersSearchResults" :key="character.index">
-            <characterCards :character="character"/>
-        </template>
-    </div>
-    <div v-else>{{ noResult }}</div> -->
 </template>
 
 <script setup>
