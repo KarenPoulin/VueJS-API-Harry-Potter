@@ -1,8 +1,9 @@
 <template>
-    <div class="m-4 mb-6 bg-slate-800 w-96 flex flex-col rounded-lg">
+    <div class="mx-2 md:mx-3 lg:mx-4 mt-4 mb-6 bg-slate-800 w-60 sm:w-80 md:w-56 lg:w-48 xl:w-60 2xl:w-80 flex flex-col rounded-lg border-4 border-yellow-100">
         <div class="relative top-0 left-0">
-            <h2 class="p-3 text-white text-center text-xl font-extrabold font-serif uppercase tracking-wider absolute inset-x-0 -bottom-7">{{ character.fullName }}</h2>
-            <img :src="character.image" :alt="`Photo de ${character.fullName}`" class="rounded-t-lg w-full h-96 object-cover">
+            <h2 class="p-3 text-white text-center font-extrabold font-serif uppercase tracking-wider absolute inset-x-0 -bottom-5 sm:-bottom-6 md:-bottom-5 lg:-bottom-7
+                text-[16px] sm:text-base md:text-xs lg:text-sm xl:text-base 2xl:text-lg">{{ character.fullName }}</h2>
+            <img :src="character.image" :alt="`Photo de ${character.fullName}`" class="rounded-t-lg w-full md:h-60 lg:h-60 xl:h-72 2xl:h-96 object-cover">
 
             <div class="absolute top-0 right-0 pt-3 pr-3">
                 <div v-if="isInFavorite(character)">
@@ -23,10 +24,10 @@
             </div>
         </div>
 
-        <div class="flex flex-col justify-center py-4 px-8 mt-6 text-white">
-            <p class="text-base font-light mb-1">Date de naissance: <span class="font-bold">{{ character.birthdate }}</span></p>
-            <p class="text-base font-light mb-1">Maison: <span class="font-bold">{{ character.hogwartsHouse }}</span></p>
-            <RouterLink :to="{name:'persosdetails', params:{id: character.index}}" class="my-3 py-2 px-4 font-medium bg-white text-black rounded-lg">
+        <div class="flex flex-col justify-center py-4 px-8 lg:mt-4 2xl:mt-6 text-white">
+            <p class="text-xs sm:text-sm md:text-xs lg:text-xs xl:text-sm 2xl:text-base font-light mb-1">Date de naissance: <span class="font-bold">{{ character.birthdate }}</span></p>
+            <p class="text-xs sm:text-sm md:text-xs lg:text-xs xl:text-sm 2xl:text-base font-light mb-1">Maison: <span class="font-bold">{{ character.hogwartsHouse }}</span></p>
+            <RouterLink :to="{name:'persosdetails', params:{id: character.index}}" class="my-3 py-2 px-4 text-center text-xs sm:text-sm lg:text-xs xl:text-base font-medium bg-white text-black rounded-lg hover:bg-yellow-400">
                 Fiche complète
             </RouterLink>
         </div>

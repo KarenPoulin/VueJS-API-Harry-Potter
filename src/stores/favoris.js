@@ -10,7 +10,6 @@ export const useFavorisStore = defineStore('favoris', () => {
         } else {
             listeFavoris.push(character);
         }
-        console.log(listeFavoris);
     };
 
     const supprimer = (character) => {
@@ -20,7 +19,6 @@ export const useFavorisStore = defineStore('favoris', () => {
                 listeFavoris.splice(index, 1)
             }
         });
-        console.log(listeFavoris);
     };
 
     return {listeFavoris, ajouter, supprimer}
